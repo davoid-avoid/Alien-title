@@ -1,0 +1,404 @@
+<html>
+
+<head>
+    <title>You have my sympathies</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        #start {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            opacity: 1;
+            transition: opacity 3s;
+            position: fixed;
+            color: white;
+        }
+
+        .start-item {
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 100%;
+            height: 239px;
+            background-size: contain;
+            position: absolute;
+            opacity: 1;
+            transition: opacity 1s;
+            -webkit-transition: opacity 1s;
+            -moz-transition: opacity 1s;
+            -o-transition: opacity 1s;
+        }
+
+        #start-logo {
+            background-image: url('assets/logo.png');
+        }
+
+        #ie-lockout {
+            background-image: url('assets/lockout.png');
+        }
+
+        #start-loading {
+            background-image: url('assets/loading.png');
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .off-switch {
+            opacity: 0 !important;
+        }
+
+        #main-container {
+            background-color: black;
+            width: 100vw;
+            height: 70vh;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            overflow: hidden;
+            opacity: 1;
+            transition: opacity 10s;
+            -webkit-transition: opacity 10s;
+            -moz-transition: opacity 10s;
+            -o-transition: opacity 10s;
+        }
+
+        .fade-out-main {
+            opacity: 0 !important;
+        }
+
+        @keyframes MOVE-BG {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .title-wrapper {
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+
+
+        @media screen and (max-width: 450px) {
+            #background-element {
+                height: 100%;
+                width: 500%;
+                position: absolute;
+                background-image: url('assets/planetbg.png');
+                background-size: cover;
+            }
+
+            .title-container {
+                width: 100%;
+                margin: 0 auto;
+                height: auto;
+                margin-top: 40%;
+            }
+
+            .start-move-bg {
+                animation-name: MOVE-BG;
+                animation-duration: 150s;
+                animation-timing-function: linear;
+            }
+        }
+
+        @media screen and (min-width: 451px) {
+            #background-element {
+                height: 100%;
+                width: 200%;
+                position: absolute;
+                background-image: url('assets/planetbg.png');
+                background-size: cover;
+            }
+
+            .title-container {
+                width: 80%;
+                margin: 0 auto;
+                height: auto;
+            }
+
+            .start-move-bg {
+                animation-name: MOVE-BG;
+                animation-duration: 400s;
+                animation-timing-function: linear;
+            }
+        }
+
+        .title-container>svg {
+            width: 100%;
+            height: auto;
+        }
+
+        .fader {
+            opacity: 0;
+            fill: #003EFF;
+        }
+
+        .faded {
+            -moz-animation: fadeIn 8s linear, fadeInColor 7s linear;
+            -webkit-animation: fadeIn 8s linear, fadeInColor 7s linear;
+            animation: fadeIn linear 8s 1, fadeInColor linear 7s 1;
+            -moz-animation-delay: 1s;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+            -moz-animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInColor {
+            from {
+                fill: #003EFF;
+            }
+
+            to {
+                fill: #FFFFFF;
+            }
+        }
+
+        @-webkit-keyframes fadeInColor {
+            from {
+                fill: #003EFF;
+            }
+
+            to {
+                fill: #FFFFFF;
+            }
+        }
+
+        @-moz-keyframes fadeInColor {
+            from {
+                fill: #003EFF;
+            }
+
+            to {
+                fill: #FFFFFF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main-container">
+        <div id="background-element"></div>
+        <div class="title-wrapper">
+            <div class="title-container">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" width="1255px" height="332px" viewBox="0 0 1255 332" enable-background="new 0 0 1255 332"
+                    xml:space="preserve">
+                    <g id="Layer_2">
+
+                        <g>
+                            <polygon fill="#FFFFFF" class="fade12 fader "
+                                points="116.486,174 111.391,188.25 138.395,188.25 138.395,188.25 133.3,174 		" />
+                        </g>
+
+                        <rect x="878.498" y="159.5" fill="#FFFFFF" class="fade11 fader " width="27.194" height="13" />
+
+                        <g>
+                            <polygon fill="#FFFFFF" class="fade10 fader "
+                                points="1123.334,196 1140.834,196 1140.834,162 1123.334,136.333 		" />
+                        </g>
+
+                        <rect x="376.333" y="180.5" fill="#FFFFFF" class="fade9 fader " width="28.417" height="15.5" />
+
+                        <polygon class="fade8 fader " fill="#FFFFFF" points="909.5,151.833 909.5,136.333 878.498,136.333 878.498,140.75 875,140.75 873.75,140.75 
+			868.75,140.75 868.75,190.75 871.333,190.75 875,190.75 878.498,190.75 878.498,196 909.5,196 909.5,180.5 878.498,180.5 
+			878.498,184.5 875,184.5 875,146.75 878.498,146.75 878.498,151.833 		" />
+
+                        <g>
+                            <polygon fill="#FFFFFF" class="fade7 fader "
+                                points="1176.667,136.333 1158.5,136.333 1158.5,171.667 1176.667,196 		" />
+                        </g>
+
+                        <g>
+                            <polygon fill="#FFFFFF" class="fade6 fader "
+                                points="156.333,196 135,136.333 131.667,136.333 123.333,148.333 140.333,196 		" />
+                        </g>
+
+                        <rect x="861.666" y="136.333" fill="#FFFFFF" class="fade5 fader " width="19.334"
+                            height="59.667" />
+
+                        <rect x="359.667" y="136.333" fill="#FFFFFF" class="fade4 fader " width="19.333"
+                            height="59.667" />
+
+                        <polygon fill="#FFFFFF" class="fade3 fader "
+                            points="1158.25,196 1176.667,196 1142.25,136.333 1123.334,136.333 	" />
+
+                        <polygon fill="#FFFFFF" class="fade2 fader "
+                            points="115.667,136.333 131.667,136.333 110.333,196 94.333,196 	" />
+
+                        <rect x="617.667" y="136.333" class="fade1 fader " fill="#FFFFFF" width="19.333"
+                            height="59.667" />
+
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="start" onclick='startUp()'>
+        <div id="start-loading" class="start-item">
+        </div>
+        <div id="ie-lockout" class="start-item off-switch">
+        </div>
+        <div id="start-logo" class="start-item off-switch">
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let startable = false;
+    let startableImage = false;
+    let startableAudio = false;
+
+
+    var audio = new Audio('assets/music.mp3');
+    audio.addEventListener('canplaythrough', isAppLoaded, false);
+    audio.load();
+
+    function isAppLoaded() {
+        console.log('audio can play')
+        startableAudio = true;
+        canStart();
+    }
+
+    function preloadImages(urls, allImagesLoadedCallback) {
+        var loadedCounter = 0;
+        var toBeLoadedNumber = urls.length;
+        urls.forEach(function (url) {
+            preloadImage(url, function () {
+                loadedCounter++;
+                console.log('Number of loaded images: ' + loadedCounter);
+                if (loadedCounter == toBeLoadedNumber) {
+                    allImagesLoadedCallback();
+                }
+            });
+        });
+        function preloadImage(url, anImageLoadedCallback) {
+            var img = new Image();
+            img.onload = anImageLoadedCallback;
+            img.src = url;
+        }
+    }
+    preloadImages([
+        'assets/planetbg.png'
+    ], function () {
+        console.log('All images were loaded');
+        startableImage = true;
+        canStart();
+    });
+
+    function canStart() {
+
+        //are we on IE? If so, no go.
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+            // IE
+            let loading = document.getElementById('start-loading')
+            loading.classList.add('off-switch')
+            let logo = document.getElementById('ie-lockout')
+            logo.classList.remove('off-switch')
+
+        } else {
+
+            if (startableImage && startableAudio) {
+                startable = true;
+
+                let loading = document.getElementById('start-loading')
+                loading.classList.add('off-switch')
+                let logo = document.getElementById('start-logo')
+                logo.classList.remove('off-switch')
+                logo.classList.add('clickable')
+            }
+        }
+    }
+
+    function startUp() {
+        if (startable) {
+            startable = false;
+
+            let logo = document.getElementById('start-logo')
+            logo.classList.remove('clickable')
+
+            let start = document.getElementById('start')
+            start.classList.add('fade-out-main')
+
+            let bg = document.getElementById('background-element')
+            bg.classList.add('start-move-bg')
+
+            let fadersList = document.getElementsByClassName('fader')
+
+            let faders = Array.from(fadersList);
+            faders.reverse();
+
+            setTimeout(function () {
+                for (let i = 0; i < faders.length; i++) {
+                    setTimeout(function () {
+                        faders[i].classList.add('faded')
+                    }, 7500 * i)
+                }
+            }, 4000)
+
+            setTimeout(function () {
+                let mainContainer = document.getElementById('main-container')
+                mainContainer.classList.add('fade-out-main')
+            }, 97000)
+
+            audio.play();
+        }
+    }
+
+</script>
+
+</html>
